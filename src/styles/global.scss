@@ -1,0 +1,16 @@
+// 기본 설정
+@import "./reset.scss";
+@import "./variable.scss";
+@import "./mixin.scss";
+
+//폰트
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+html{ font-size: 62.5%; letter-spacing: -0.02em; }
+body{ 
+    font-family: 'Pretendard Variable', sans-serif;
+    color: var(--main-txt);
+    background-color: var(--main-bg);
+    padding: 50px 120px;
+    box-sizing: border-box;
+}

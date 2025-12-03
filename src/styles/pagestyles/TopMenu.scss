@@ -1,0 +1,38 @@
+#top-menu{
+    @include flex-layout($justify:space-between);
+    background-color: rgba(24,24,24,0.4);
+    position: fixed;
+    left: 120px;
+    right: 120px;
+    z-index: 100;
+    .home-btn{
+        cursor: pointer;
+        svg{
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .menu-list{
+        @include flex-layout();
+        gap: 3rem;
+        a{
+            @include font-18();
+            cursor: pointer;
+            position: relative;
+            &::before{
+                content: attr(data-text);
+                font-weight: bold;
+                height: 0;
+                visibility: hidden;
+                overflow: hidden;
+                user-select: none;
+                pointer-events: none;
+                display: block;
+            }
+            &:hover{
+                color: var(--sub-point);
+                font-weight: bold;
+            }
+        }
+    }
+} 

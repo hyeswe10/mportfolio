@@ -1,0 +1,96 @@
+@mixin flex-layout($justify:center,$align:center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin font-42 {
+    font-size: 4.2rem;
+    font-weight: bold;
+}
+
+@mixin font-36 {
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
+@mixin font-26 {
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+@mixin font-22 {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+@mixin font-18 {
+    font-size: 1.8rem;
+}
+
+@mixin font-14 {
+    font-size: 1.4rem;
+}
+
+@mixin font-10 {
+    font-size: 1rem;
+}
+
+@mixin font-6 {
+    font-size: 0.6rem;
+}
+
+@mixin font-4 {
+    font-size: 0.4rem;
+}
+
+
+// 버튼
+@mixin mp-mp{
+    width: 120px;
+    height: 40px;
+    background-color: none;
+    color: var(--sub-point);
+    border: 1px solid var(--sub-point);
+    :hover{
+        background-color: var(--sub-point);
+        color: var(--main-txt);
+    }
+}
+
+@mixin mp-net{
+    width: 124px;
+    height: 40px;
+    padding: 0.8rem 1.6rem;
+    color: var(--net-bg);
+    background-color: var(--net-title);
+    :hover{
+        color: var(--net-title);
+        background-color: var(--net-bg);
+    }
+}
+
+@mixin mp-mm{
+    width: 124px;
+    height: 40px;
+    padding: 0.8rem 1.6rem;
+    color: var(--mm-bg);
+    background-color: var(--mm-title);
+    :hover{
+        color: var(--mm-title);
+        background-color: var(--mm-bg);
+    }
+}
+
+@mixin mp-ab{
+    width: 124px;
+    height: 40px;
+    padding: 1.6rem 0.8rem;
+    color: var(--ab-bg);
+    background-color: var(--ab-logo);
+    :hover{
+        color: var(--ab-logo);
+        background-color: var(--ab-bg);
+    }
+}
+
