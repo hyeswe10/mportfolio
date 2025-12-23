@@ -1,0 +1,79 @@
+#about-me{
+    height: 800px;
+    @include flex-layout($justify:flex-end);
+    flex-direction: column;
+    gap: 8rem;
+    .top{
+        padding-top: 10rem;
+        width: 80%;
+        @include flex-layout($justify:space-around);
+        .left{
+            word-break: keep-all;
+            text-align: right;
+            @include flex-layout($align:flex-end);
+            flex-direction: column;
+            gap: 2.5rem;
+            .fe-title{
+                letter-spacing: 0.6rem;
+                @include font-18();
+                font-weight: 200;
+                color: var(--sub-point);
+            }
+            h1{
+                @include font-42();
+                font-weight: 400;
+                span{
+                    font-size: 4.4rem;
+                    font-weight: bold;
+                    color: var(--main-point);
+                }
+            }
+            .exp{
+                @include font-18();
+                font-weight: 200;
+                span{
+                    font-weight: bold;
+                }
+            }
+            .icons{
+                svg{
+                    height: 30px;
+                    width: 30px;
+                    margin: 0 0.8rem;
+                    cursor: pointer;
+                    &:hover{
+                        color: var(--sub-point);
+                    }
+                }
+            }
+        }
+        .right{
+            height: 350px;
+            width: 350px;
+            background-image: url(../../../public/images/김리헬님.png);
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+        }
+    }
+    .middle{
+        overflow: hidden;
+        width: 90%;
+        // background-color: rgba(255,255,255,0.1);
+        padding: 1rem 0;
+        .container{
+            @include flex-layout();
+            img{
+                width: 40px;
+                height: 40px;
+                margin: 0 20px;
+            }
+        }
+    }
+    .bottom{
+        svg{
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
