@@ -1,0 +1,138 @@
+#main-projects{
+    width: 100%;
+    padding: 20rem 10rem;
+    @include flex-layout();
+    flex-direction: column;
+    gap: 5rem;
+    .title{
+        align-self: flex-end;
+        text-align: right;
+        @include flex-layout($align:flex-end);
+        flex-direction: column;
+        gap: 4rem;
+        h1{
+            @include font-54();
+            color: var(--main-point);
+        }
+        .main-desc{
+            font-size: 1.3rem;
+            font-weight: 200;
+            letter-spacing: 0.3px;
+            line-height: 1.2;
+        }
+    }
+    .timeline-container{
+        width: 100%;
+        position: relative;
+        padding: 150px 0;
+        .timeline-line{
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background-color: var(--main-txt);
+            z-index: 1;
+            &::after{
+                content: '＞';
+                position: absolute;
+                right: -20px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--main-txt);
+                font-size: 70px;
+                font-weight: 100;
+            }
+        }
+        .project1-wrap{
+            @include flex-layout($justify:space-around,$align:flex-end);
+            .project1-item{
+                @include flex-layout();
+                flex-direction: column;
+                gap: 2rem;
+                &.blog{
+                    gap: 7rem;
+                }
+                .project-content{
+                    @include flex-layout();
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    .badge{
+                        color: var(--sm-btn);
+                    }
+                    h3{
+                        @include font-24();
+                        color: var(--sub-point);
+                    }
+                    .desc{
+                        white-space: pre-line;
+                        text-align: center;
+                        font-size: 1.1rem;
+                    }
+                    button{
+                        color: var(--sub-point);
+                        @include font-14();
+                        font-weight: bold;
+                        background: none;
+                        border: 1.5px solid var(--sub-point);
+                        padding: 0.8rem 3rem;
+                        margin-top: 1rem;
+                        &:hover{
+                            background-color: var(--sub-point);
+                            color: var(--main-txt);
+                            text-shadow: 0 0 7px var(--main-bg);
+                        }
+                    }
+                }
+                .timeline-dot{
+                    width: 2px;
+                    height: 5rem;
+                    background-color: var(--sub-point);
+                }
+            }
+        }
+        .project2-wrap{
+            @include flex-layout($align:flex-start);
+            gap: 15rem;
+            .project2-item{
+                @include flex-layout();
+                flex-direction: column;
+                gap: 2rem;
+                .timeline-dot{
+                    width: 2px;
+                    height: 5rem;
+                    background-color: var(--sub-point);
+                }
+                .project-content{
+                    @include flex-layout();
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    .badge{
+                        color: var(--sm-btn);
+                    }
+                    h3{
+                        @include font-24();
+                        color: var(--sub-point);
+                    }
+                    .desc{
+                        white-space: pre-line;
+                        text-align: center;
+                        font-size: 1.1rem;
+                    }
+                    button{
+                        color: var(--sub-point);
+                        @include font-14();
+                        font-weight: bold;
+                        background: none;
+                        border: 1.5px solid var(--sub-point);
+                        padding: 0.8rem 3rem;
+                        margin-top: 1rem;
+                        &:hover{
+                            background-color: var(--sub-point);
+                            color: var(--main-txt);
+                            text-shadow: 0 0 7px var(--main-bg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

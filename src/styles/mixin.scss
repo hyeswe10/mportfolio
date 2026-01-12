@@ -4,6 +4,11 @@
     align-items: $align;
 }
 
+@mixin font-54 {
+    font-size: 5.4rem;
+    font-weight: bold;
+}
+
 @mixin font-42 {
     font-size: 4.2rem;
     font-weight: bold;
@@ -19,6 +24,11 @@
     font-weight: 500;
 }
 
+@mixin font-24 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
 @mixin font-22 {
     font-size: 2.2rem;
     font-weight: bold;
@@ -30,6 +40,10 @@
 
 @mixin font-14 {
     font-size: 1.4rem;
+}
+
+@mixin font-12 {
+    font-size: 1.2rem;
 }
 
 @mixin font-10 {
