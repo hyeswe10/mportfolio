@@ -1,0 +1,123 @@
+#clone-coding{
+    width: 100%;
+    padding: 0rem 10rem;
+    @include flex-layout();
+    flex-direction: column;
+    gap: 15rem;
+    h1{
+        @include font-54();
+        text-align: center;
+        color: var(--main-point);
+    }
+    .project-wrap{
+        width: 100%;
+        @include flex-layout();
+        flex-direction: column;
+        margin: 0 auto;
+        flex: 1;
+        .project-item{
+            width: 60%;
+            @include flex-layout($justify:flex-start);
+            gap: 5rem;
+            padding: 5rem 0;
+            &.netflix{
+                button{
+                    width: 20%;
+                    color: var(--net-bg);
+                    background-color: var(--net-title);
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.8rem;
+                    @include font-14();
+                    font-weight: bold;
+                    &:hover{
+                        background-color: var(--net-bg);
+                        color: var(--net-title);
+                    }
+                }
+            }
+            &.momentum{
+                border-top: 1px solid var(--main-txt);
+                border-bottom: 1px solid var(--main-txt);
+                button{
+                    width: 20%;
+                    color: var(--mm-bg);
+                    background-color: var(--mm-title);
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.8rem;
+                    @include font-14();
+                    font-weight: bold;
+                    &:hover{
+                        background-color: var(--mm-bg);
+                        color: var(--mm-title);
+                    }
+                }
+            }
+            &.airbnb{
+                button{
+                    width: 20%;
+                    color: var(--ab-bg);
+                    background-color: var(--ab-logo);
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.8rem;
+                    @include font-14();
+                    font-weight: bold;
+                    &:hover{
+                        background-color: var(--ab-bg);
+                        color: var(--ab-logo);
+                    }
+                }
+            }
+            .project-photo{
+                flex-shrink: 0;
+                width: 350px;
+                height: 200px;
+                background-color: var(--main-point);
+                border-radius: 20px;
+                &.netflix{
+                    background-image: url(../../../public/images/main-clone/main-netflix.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+                &.momentum{
+                    background-image: url(../../../public/images/main-clone/main-momentum.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+                &.airbnb{
+                    background-image: url(../../../public/images/main-clone/main-airbnb.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+            .content{
+                display: flex;
+                flex-direction: column;
+                word-break: keep-all;
+                gap: 2.5rem;
+                flex: 1;
+                h3{
+                    font-size: 3.2rem;
+                }
+                .tools{
+                    @include flex-layout($justify:flex-start);
+                    gap: 0.7rem;
+                    span{
+                        border: 0.5px solid var(--main-txt);
+                        padding: 0.3rem 0.5rem;
+                        border-radius: 2rem;
+                        font-weight: 300;
+                        letter-spacing: 1.1;
+                        font-size: 1.1rem;
+                    }
+                }
+                .desc{
+                    font-weight: 200;
+                    @include font-12();
+                }
+            }
+        }
+    }
+}

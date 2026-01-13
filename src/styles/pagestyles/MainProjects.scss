@@ -22,7 +22,7 @@
         }
     }
     .timeline-container{
-        width: 100%;
+        width: 80%;
         position: relative;
         padding: 150px 0;
         .timeline-line{
@@ -59,13 +59,14 @@
                         color: var(--sm-btn);
                     }
                     h3{
-                        @include font-24();
+                        @include font-26();
                         color: var(--sub-point);
                     }
                     .desc{
                         white-space: pre-line;
                         text-align: center;
                         font-size: 1.1rem;
+                        font-weight: 200;
                     }
                     button{
                         color: var(--sub-point);
@@ -91,11 +92,14 @@
         }
         .project2-wrap{
             @include flex-layout($align:flex-start);
-            gap: 15rem;
+            gap: 20rem;
             .project2-item{
                 @include flex-layout();
                 flex-direction: column;
                 gap: 2rem;
+                &.quiz{
+                    gap: 4rem;
+                }
                 .timeline-dot{
                     width: 1px;
                     height: 5rem;
@@ -109,13 +113,14 @@
                         color: var(--sm-btn);
                     }
                     h3{
-                        @include font-24();
+                        @include font-26();
                         color: var(--sub-point);
                     }
                     .desc{
                         white-space: pre-line;
                         text-align: center;
                         font-size: 1.1rem;
+                        font-weight: 200;
                     }
                     button{
                         color: var(--sub-point);

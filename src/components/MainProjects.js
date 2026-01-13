@@ -76,7 +76,7 @@ const MainProjects = () => {
                 <div className='project2-wrap'>
                     {
                         project2.map((item,idx)=>{
-                            return <div key={idx} className='project2-item'>
+                            return <div key={idx} className={`project2-item ${idx === 0 ? 'quiz' : ''}`}>
                                 <div className='timeline-dot'></div>
                                 <div className='project-content'>
                                     {item.badge && 
