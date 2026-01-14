@@ -1,0 +1,58 @@
+#practical-publishing{
+    padding: 20rem 10rem;
+    @include flex-layout();
+    flex-direction: column;
+    gap: 10rem;
+    h1{
+        @include font-54();
+        text-align: center;
+        color: var(--main-point);
+    }
+    .project-wrap{
+        @include flex-layout();
+        gap: 8rem;
+        .item{
+            @include flex-layout();
+            flex-direction: column;
+            gap: 1.5rem;
+            .photo{
+                width: 180px;
+                height: 250px;
+                background-color: var(--main-point);
+                border-radius: 1.7rem;
+                &.vogue{
+                    background-image: url(../../../public/images/main-practical/vogue.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+                &.book{
+                    background-image: url(../../../public/images/main-practical/bookstore.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+                &.pin{
+                    background-image: url(../../../public/images/main-practical/pinterest.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+                &.logger{
+                    background-image: url(../../../public/images/main-practical/logger.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+            .text{
+                text-align: center;
+                h3{
+                    @include font-24();
+                    padding-bottom: 0.3rem;
+                    color: var(--sub-point);
+                }
+            }
+        }
+    }
+}
