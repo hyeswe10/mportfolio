@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IoSparklesSharp } from "react-icons/io5";
+import ShoppingMall from './ShoppingMall';
+import FestivalPage from './FestivalPage';
+import ParkingSystem from './ParkingSystem';
 
 const MainProjects = () => {
+    const [mallOpen, setMallOpen] = useState(false);
+    const [festOpen, setFestOpen] = useState(false);
+    const [parkOpen, setParkOpen] = useState(false);
     const project1 = [
         {
             title: "BLOG WEBPAGE",
@@ -52,7 +58,7 @@ const MainProjects = () => {
                 <div className='project1-wrap'>
                     {
                         project1.map((item,idx)=>{
-                            return <div key={idx} className={`project1-item ${idx === 0 ? 'blog' : ''}`}>
+                            return <div key={idx} className={`project1-item ${idx === 0 ? 'blog' : idx === 1 ? 'mall' : 'festival'}`}>
                                 <div className='project-content'>
                                     {item.badge && 
                                         <span className='badge'>
@@ -64,7 +70,7 @@ const MainProjects = () => {
                                     <h3>{item.title}</h3>
                                     <p className='desc'>{item.desc}</p>
                                     {item.button &&
-                                        <button className='button'>이동하기</button>
+                                        <button className='button' onClick={()=>{item.title === 'SHOPPING MALL' ? setMallOpen(true) : setFestOpen(true)}}>이동하기</button>
                                     }
                                 </div>
                                 <div className='timeline-dot'></div>
@@ -76,7 +82,7 @@ const MainProjects = () => {
                 <div className='project2-wrap'>
                     {
                         project2.map((item,idx)=>{
-                            return <div key={idx} className={`project2-item ${idx === 0 ? 'quiz' : ''}`}>
+                            return <div key={idx} className={`project2-item ${idx === 0 ? 'quiz' : 'parking'}`}>
                                 <div className='timeline-dot'></div>
                                 <div className='project-content'>
                                     {item.badge && 
@@ -89,7 +95,7 @@ const MainProjects = () => {
                                     <h3>{item.title}</h3>
                                     <p className='desc'>{item.desc}</p>
                                     {item.button &&
-                                        <button className='button'>이동하기</button>
+                                        <button className='button' onClick={()=>{setParkOpen(true)}}>이동하기</button>
                                     }
                                 </div>
                             </div>
@@ -97,6 +103,9 @@ const MainProjects = () => {
                     }
                 </div>
             </div>
+            { mallOpen && <ShoppingMall isOpen={mallOpen} onClose={()=>{setMallOpen(false)}}/> }
+            { festOpen && <FestivalPage isOpen={festOpen} onClose={()=>{setFestOpen(false)}}/> }
+            { parkOpen && <ParkingSystem isOpen={parkOpen} onClose={()=>{setParkOpen(false)}}/> }
         </div>
     );
 };
