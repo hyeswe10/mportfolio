@@ -8,6 +8,7 @@ const MainProjects = () => {
     const [mallOpen, setMallOpen] = useState(false);
     const [festOpen, setFestOpen] = useState(false);
     const [parkOpen, setParkOpen] = useState(false);
+    console.log(mallOpen);
     const project1 = [
         {
             title: "BLOG WEBPAGE",

@@ -1,6 +1,49 @@
 #shopping-mall{
+    position: fixed;
+    top: 0;
     z-index: 11111111;
     width: 100%;
     background-color: rgba(0,0,0,0.5);
     height: 100%;
+    @include flex-layout();
+    flex-direction: column;
+    .mall-wrap{
+        width: 80%;
+        background-color: var(--sm-bg);
+        padding: 8rem;
+        .img{
+            width: 100%;
+        }
+        .title-wrap{
+            .top{
+                @include flex-layout($justify:space-between);
+                h1{
+                    color: var(--sm-green);
+                    @include font-42();
+                }
+                .link-btn{
+                    button{
+                        color: var(--sm-btn);
+                        @include font-24();
+                        font-weight: bold;
+                        background: none;
+                        border: 2px solid var(--sm-btn);
+                        padding: 0.7rem 1rem;
+                        margin: 1rem 0;
+                        border-radius: 1rem;
+                        width: 220px;
+                        &:hover{
+                            background-color: var(--sm-btn);
+                            color: var(--main-bg);
+                        }
+                    }
+                }
+            }
+            .tools{
+                @include font-12();
+                font-weight: 200;
+                letter-spacing: 0rem;
+            }
+        }
+    }
 }
