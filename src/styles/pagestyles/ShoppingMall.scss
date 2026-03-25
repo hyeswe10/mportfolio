@@ -1,48 +1,123 @@
 #shopping-mall{
     position: fixed;
     top: 0;
-    z-index: 11111111;
+    z-index: 111;
     width: 100%;
     background-color: rgba(0,0,0,0.5);
     height: 100%;
-    @include flex-layout();
+    @include flex-layout($align:flex-start);
     flex-direction: column;
+    overflow-y: auto;
     .mall-wrap{
+        position: relative;
         width: 80%;
+        max-width: 1300px;
+        min-width: 0;
+        overflow-y: auto;
         background-color: var(--sm-bg);
-        padding: 8rem;
-        .img{
-            width: 100%;
+        padding: 5rem;
+        @include flex-layout($justify:flex-start);
+        flex-direction: column;
+        min-height: auto;
+        scrollbar-width: none;
+        align-self: center;
+        &::-webkit-scrollbar{
+            display: none;
         }
-        .title-wrap{
-            .top{
-                @include flex-layout($justify:space-between);
-                h1{
-                    color: var(--sm-green);
-                    @include font-42();
-                }
-                .link-btn{
-                    button{
-                        color: var(--sm-btn);
-                        @include font-24();
-                        font-weight: bold;
-                        background: none;
-                        border: 2px solid var(--sm-btn);
-                        padding: 0.7rem 1rem;
-                        margin: 1rem 0;
-                        border-radius: 1rem;
-                        width: 220px;
-                        &:hover{
-                            background-color: var(--sm-btn);
-                            color: var(--main-bg);
+        .close-icon{
+            position: sticky;
+            top: 0;
+            float: right;
+            z-index: 112;
+            width: 100%;
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: right;
+            cursor: pointer;
+        }
+        .mall-inner{
+            width: 95%;
+            overflow: visible;
+            min-width: 0;
+            .img{
+                width: 100%;
+                background-image: url(../../../public/images/shopping-mall/sm-bg.png);
+                background-position: top;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 550px;
+                border-radius: 1.5rem;
+            }
+            .title-wrap{
+                width: 100%;
+                padding: 0rem 3rem;
+                padding-bottom: 15rem;
+                padding-top: 5rem;
+                .top{
+                    @include flex-layout($justify:space-between);
+                    h1{
+                        color: var(--sm-green);
+                        font-size: 5.2rem;
+                    }
+                    .link-btn{
+                        button{
+                            color: var(--sm-btn);
+                            @include font-24();
+                            font-weight: bold;
+                            background: none;
+                            border: 2px solid var(--sm-btn);
+                            padding: 0.7rem 1rem;
+                            margin: 1rem 0;
+                            border-radius: 1rem;
+                            width: 220px;
+                            &:hover{
+                                background-color: var(--sm-btn);
+                                color: var(--main-bg);
+                            }
                         }
                     }
                 }
+                .tools{
+                    @include font-12();
+                    font-weight: 200;
+                    letter-spacing: 0rem;
+                }
             }
-            .tools{
-                @include font-12();
-                font-weight: 200;
-                letter-spacing: 0rem;
+            .menu{
+                width: 100%;
+                @include flex-layout();
+                flex-wrap: wrap;
+                gap: clamp(4px, 1vw, 18px);
+                padding: 2rem 0;
+                border-bottom: 1px solid var(--main-txt);
+                button{
+                    position: relative;
+                    font-size: clamp(12px, 1.6vw, 28px);
+                    font-weight: 500;
+                    color: var(--sm-green);
+                    padding: 8px clamp(12px, 2vw, 26px);
+                    border: 1px solid var(--sm-green);
+                    border-radius: 1.1rem;
+                    background-color: transparent;
+                    &:after{
+                        content: attr(data-text);
+                        display: block;
+                        font-weight: bold;
+                        height: 0;
+                        visibility: hidden;
+                        overflow: hidden;
+                    }
+                    &:hover{
+                        background-color: var(--sm-green);
+                        color: var(--sm-bg);
+                        font-weight: bold;
+                    }
+                    &.checked{
+                        background-color: var(--sm-green);
+                        color: var(--sm-bg);
+                        font-weight: bold;
+                    }
+                }
             }
         }
     }

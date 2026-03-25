@@ -1,0 +1,40 @@
+#mall-con{
+    width: 100%;
+    padding: 15rem 0;
+    @include flex-layout();
+    flex-direction: column;
+    gap: 10rem;
+    h1{
+        font-size: 4.2rem;
+        color: var(--sm-green);
+    }
+    .desc{
+        @include flex-layout();
+        flex-direction: column;
+        gap: 5rem;
+        > div{
+            width: 65%;
+            @include flex-layout($justify:space-between);
+            gap: 3rem;
+            div{
+                @include flex-layout();
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+                padding: 0 2rem;
+                flex: 1;
+                height: 150px;
+                word-break: keep-all;
+                border: 1px solid var(--sm-btn);
+                border-radius: 3rem;
+                h3{
+                    font-size: 2.3rem;
+                    color: var(--sm-btn);
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}

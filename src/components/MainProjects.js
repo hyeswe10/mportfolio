@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoSparklesSharp } from "react-icons/io5";
 import ShoppingMall from './ShoppingMall';
 import FestivalPage from './FestivalPage';
@@ -9,6 +9,9 @@ const MainProjects = () => {
     const [festOpen, setFestOpen] = useState(false);
     const [parkOpen, setParkOpen] = useState(false);
     console.log(mallOpen);
+    useEffect(()=>{
+        setMallOpen(false);
+    },[])
     const project1 = [
         {
             title: "BLOG WEBPAGE",
