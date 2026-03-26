@@ -5,7 +5,7 @@
     width: 100%;
     background-color: rgba(0,0,0,0.5);
     height: 100%;
-    @include flex-layout($align:flex-start);
+    @include flex-layout();
     flex-direction: column;
     overflow-y: auto;
     .mall-wrap{
@@ -20,7 +20,6 @@
         flex-direction: column;
         min-height: auto;
         scrollbar-width: none;
-        align-self: center;
         &::-webkit-scrollbar{
             display: none;
         }

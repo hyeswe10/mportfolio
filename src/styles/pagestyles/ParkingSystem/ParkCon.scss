@@ -1,0 +1,54 @@
+#park-con{
+    padding: 15rem 0;
+    width: 100%;
+    @include flex-layout();
+    flex-direction: column;
+    gap: 10rem;
+    h1{
+        font-size: 4.2rem;
+        color: var(--dp-point);
+    }
+    .desc{
+        @include flex-layout();
+        flex-direction: column;
+        gap: 2rem;
+        width: 70%;
+        word-break: keep-all;
+        h3{
+            font-size: 2.8rem;
+            color: var(--dp-btn);
+            padding-bottom: 1.2rem;
+        }
+        p{
+            font-size: 1.3rem;
+            line-height: 2rem;
+            font-weight: 200;
+        }
+        .top{
+            @include flex-layout($align:flex-start);
+            gap: 3rem;
+            text-align: center;
+            padding-left: 3rem;
+            >div{
+                padding: 2.2rem 2rem;
+                border: 1px solid var(--dp-btn);
+            }
+            .db{
+                flex: 1;
+            }
+            .page{
+                flex: 2;
+            }
+        }
+        .bottom{
+            @include flex-layout($align:flex-start);
+            gap: 3rem;
+            text-align: center;
+            padding-right: 3rem;
+            >div{
+                padding: 2.2rem 2rem;
+                border: 1px solid var(--dp-btn);
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+#park-info{
+    padding: 15rem 0;
+    width: 100%;
+    @include flex-layout();
+    flex-direction: column;
+    gap: 10rem;
+    h1{
+        font-size: 4.2rem;
+        color: var(--dp-point);
+    }
+    .info-desc{
+        width: 35%;
+        @include flex-layout();
+        flex-direction: column;
+        gap: 4rem;
+        padding: 4rem 0;
+        border-top: 1px solid var(--dp-second-point);
+        border-bottom: 1px solid var(--dp-second-point);
+        text-align: center;
+        div{
+            @include flex-layout();
+            flex-direction: column;
+            gap: 3rem;
+            h3{
+                font-size: 2.3rem;
+                color: var(--dp-second-point);
+            }
+            p{
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+            &.special{
+                h4{
+                    font-size: 2rem;
+                }
+                div{
+                    gap: 0.5rem;
+                }
+            }
+        }
+    }
+}
