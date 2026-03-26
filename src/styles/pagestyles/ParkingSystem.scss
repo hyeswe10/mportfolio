@@ -26,11 +26,11 @@
             top: 0;
             float: right;
             z-index: 112;
-            width: 100%;
             font-size: 4rem;
             font-weight: bold;
             text-align: right;
             cursor: pointer;
+            align-self: flex-end;
         }
         .park-inner{
             width: 95%;
