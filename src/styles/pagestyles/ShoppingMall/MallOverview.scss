@@ -8,7 +8,7 @@
         color: var(--sm-green);
     }
     .desc{
-        width: 80%;
+        width: 70%;
         ul{
             h2{
                 font-size: 2.5rem;
@@ -20,6 +20,8 @@
                 word-break: keep-all;
                 margin-left: 2rem;
                 padding: 0.5rem 0;
+                font-weight: 300;
+                line-height: 2.2rem;
             }
         }
     }

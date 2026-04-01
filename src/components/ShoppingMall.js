@@ -21,6 +21,9 @@ const ShoppingMall = ({isOpen,onClose}) => {
         } else {
             document.body.style.overflow = 'unset';
         }
+        return()=>{
+            document.body.style.overflow = '';
+        }
     },[isOpen])
     useEffect(()=>{
         setMenu("info")

@@ -13,7 +13,7 @@
         flex-direction: column;
         gap: 3rem;
         > div{
-            width: 65%;
+            width: 70%;
             @include flex-layout($justify:space-between);
             gap: 3rem;
             div{
@@ -32,8 +32,8 @@
                     color: var(--sm-btn);
                 }
                 p{
-                    font-size: 1.3rem;
-                    font-weight: 200;
+                    font-size: 1.4rem;
+                    font-weight: 300;
                 }
             }
         }

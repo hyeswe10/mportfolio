@@ -22,7 +22,7 @@
             padding: 5rem 0;
             &.netflix{
                 button{
-                    width: 20%;
+                    width: 30%;
                     color: var(--net-bg);
                     background-color: var(--net-title);
                     padding: 0.5rem 1rem;
@@ -39,7 +39,7 @@
                 border-top: 1px solid var(--main-txt);
                 border-bottom: 1px solid var(--main-txt);
                 button{
-                    width: 20%;
+                    width: 30%;
                     color: var(--mm-bg);
                     background-color: var(--mm-title);
                     padding: 0.5rem 1rem;
@@ -54,7 +54,7 @@
             }
             &.airbnb{
                 button{
-                    width: 20%;
+                    width: 30%;
                     color: var(--ab-bg);
                     background-color: var(--ab-logo);
                     padding: 0.5rem 1rem;

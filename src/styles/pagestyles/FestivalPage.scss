@@ -1,0 +1,128 @@
+#festival-page{
+    position: fixed;
+    top: 0;
+    z-index: 111;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    @include flex-layout();
+    flex-direction: column;
+    overflow-y: auto;
+    padding-top: 10rem;
+    .fest-wrap{
+        position: relative;
+        width: 80%;
+        max-width: 1300px;
+        overflow-y: auto;
+        background-color: var(--gf-bg);
+        padding: 5rem;
+        @include flex-layout($justify:flex-start);
+        flex-direction: column;
+        scrollbar-width: none;
+        border-top-left-radius: 3rem;
+        border-top-right-radius: 3rem;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        .close-icon{
+            position: sticky;
+            top: 0;
+            float: right;
+            z-index: 112;
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: right;
+            cursor: pointer;
+            align-self: flex-end;
+        }
+        .fest-inner{
+            width: 95%;
+            overflow: visible;
+            min-width: 0;
+            @include flex-layout($justify:space-between);
+            padding: 0 10rem;
+            .img{
+                width: 290px;
+                height: 550px;
+                background-image: url(../../../public/images/festival-page/gg-bg.png);
+                background-repeat: no-repeat;
+                background-position: top;
+                background-size: cover;
+                border-radius: 1.5rem;
+            }
+            .title-wrap{
+                height: 100%;
+                @include flex-layout(space-around,flex-end);
+                flex-direction: column;
+                .top{
+                    h1{
+                        font-size: 5.2rem;
+                        text-align: right;
+                    }
+                    .tools{
+                        @include font-12();
+                        font-weight: 200;
+                        letter-spacing: 0rem;
+                        color: var(--gf-second-point);
+                        text-align: right;
+                        line-height: 2rem;
+                    }
+                }
+                .link-btn{
+                    button{
+                        color: var(--gf-point);
+                        @include font-24();
+                        font-weight: bold;
+                        background: none;
+                        border: 2px solid var(--gf-point);
+                        padding: 0.7rem 1rem;
+                        margin: 1rem 0;
+                        border-radius: 1rem;
+                        width: 220px;
+                        &:hover{
+                            background-color: var(--gf-point);
+                            color: var(--gf-bg);
+                        }
+                    }
+                }
+            }
+        }
+        .menu{
+            margin-top: 5rem;
+            width: 90%;
+            @include flex-layout();
+            flex-wrap: wrap;
+            gap: clamp(4px,1vw,18px);
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--main-txt);
+            button{
+                position: relative;
+                font-size: clamp(10px,1.6vw,20px);
+                font-weight: 500;
+                color: var(--gf-point);
+                padding: 8px clamp(12px,2vw,26px);
+                border: 1px solid var(--gf-point);
+                border-radius: 1.1rem;
+                background-color: transparent;
+                &::after{
+                    content: attr(data-text);
+                    display: block;
+                    font-weight: bold;
+                    height: 0;
+                    visibility: hidden;
+                    overflow: hidden;
+                }
+                &:hover{
+                    background-color: var(--gf-point);
+                    color: var(--gf-bg);
+                    font-weight: bold;
+                }
+                &.checked{
+                    background-color: var(--gf-point);
+                    color: var(--gf-bg);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

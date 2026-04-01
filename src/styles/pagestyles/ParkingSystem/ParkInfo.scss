@@ -9,7 +9,7 @@
         color: var(--dp-point);
     }
     .info-desc{
-        width: 35%;
+        width: 450px;
         @include flex-layout();
         flex-direction: column;
         gap: 4rem;

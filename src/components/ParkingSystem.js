@@ -21,6 +21,9 @@ const ParkingSystem = ({isOpen,onClose}) => {
         } else {
             document.body.style.overflow = 'unset';
         }
+        return()=>{
+            document.body.style.overflow = '';
+        }
     },[isOpen])
     useEffect(()=>{
         setMenu("info")
@@ -37,8 +40,8 @@ const ParkingSystem = ({isOpen,onClose}) => {
                         <div className="top">
                             <h1>PARKING<br/>SYSTEM</h1>
                             <div className="link-btn">
-                                <button className="github" onClick={()=>{window.open("https://github.com/hyeswe10/dreamland","_blank")}}>GitHub LINK</button>
-                                <button className="website" onClick={()=>{window.open("https://hyeswe10.github.io/dreamland/")}}>WebSite LINK</button>
+                                <button className="github" onClick={()=>{window.open("https://github.com/hyeswe10/dreamland","_blank")}}>GitHub Link</button>
+                                <button className="website" onClick={()=>{window.open("https://hyeswe10.github.io/dreamland/")}}>WebSite <span>Link</span></button>
                             </div>
                         </div>
                         <p className="tools">React / Supabase / JSON / SCSS / Figma</p>

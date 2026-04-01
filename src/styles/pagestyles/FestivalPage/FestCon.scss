@@ -1,4 +1,4 @@
-#park-con{
+#fest-con{
     padding: 15rem 0;
     width: 100%;
     @include flex-layout();
@@ -6,23 +6,23 @@
     gap: 10rem;
     h1{
         font-size: 4.2rem;
-        color: var(--dp-point);
+        color: var(--gf-point);
     }
     .desc{
         @include flex-layout();
         flex-direction: column;
         gap: 2rem;
-        width: 80%;
+        width: 70%;
         word-break: keep-all;
         h3{
             font-size: 2.8rem;
-            color: var(--dp-btn);
+            color: var(--gf-second-point);
             padding-bottom: 1.2rem;
         }
         p{
             font-size: 1.4rem;
             line-height: 2rem;
-            font-weight: 200;
+            font-weight: 300;
         }
         .top{
             @include flex-layout($align:flex-start);
@@ -31,7 +31,7 @@
             padding-left: 3rem;
             >div{
                 padding: 2.2rem 2rem;
-                border: 1px solid var(--dp-btn);
+                border: 1px solid var(--gf-second-point);
             }
             .db{
                 flex: 1;
@@ -47,7 +47,7 @@
             padding-right: 3rem;
             >div{
                 padding: 2.2rem 2rem;
-                border: 1px solid var(--dp-btn);
+                border: 1px solid var(--gf-second-point);
             }
         }
     }
