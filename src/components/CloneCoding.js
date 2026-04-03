@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Netflix from './Netflix';
 
 const CloneCoding = () => {
+    const [netOpen, setNetOpen] = useState(false);
+    const [momOpen, setMomOpen] = useState(false);
+    const [airOpen, setAirOpen] = useState(false);
     const projects = [
         {
             title: "NETFLIX",
@@ -15,6 +19,15 @@ const CloneCoding = () => {
             desc: "Grid Layout과 반응형 디자인에 중점을 두고 클론을 제작하였습니다"
         }
     ]
+    const handleClick = (item)=>{
+        if(item === "NETFLIX"){
+            setNetOpen(true);
+        } else if(item === "MOMENTUM"){
+            setMomOpen(true);
+        } else {
+            setAirOpen(true);
+        }
+    }
     return (
         <div id='clone-coding'>
             <h1>CLONE CODING<br/>PROJECT</h1>
@@ -42,12 +55,15 @@ const CloneCoding = () => {
                                     <span>SCSS</span>
                                 </div>}
                                 <p className='desc'>{item.desc}</p>
-                                <button>정보 더보기</button>
+                                <button onClick={()=>{handleClick(item.title)}}>정보 더보기</button>
                             </div>
                         </div>)
                     })
                 }
             </div>
+            { netOpen && <Netflix isOpen={netOpen} onClose={()=>{setNetOpen(false)}}/>}
+            { momOpen && <Netflix isOpen={momOpen} onClose={()=>{setMomOpen(false)}}/>}
+            { airOpen && <Netflix isOpen={airOpen} onClose={()=>{setAirOpen(false)}}/>}
         </div>
     );
 };
