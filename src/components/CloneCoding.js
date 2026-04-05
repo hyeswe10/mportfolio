@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Netflix from './Netflix';
+import Momentum from './Momentum';
+import Airbnb from './Airbnb';
 
 const CloneCoding = () => {
     const [netOpen, setNetOpen] = useState(false);
@@ -62,8 +64,8 @@ const CloneCoding = () => {
                 }
             </div>
             { netOpen && <Netflix isOpen={netOpen} onClose={()=>{setNetOpen(false)}}/>}
-            { momOpen && <Netflix isOpen={momOpen} onClose={()=>{setMomOpen(false)}}/>}
-            { airOpen && <Netflix isOpen={airOpen} onClose={()=>{setAirOpen(false)}}/>}
+            { momOpen && <Momentum isOpen={momOpen} onClose={()=>{setMomOpen(false)}}/>}
+            { airOpen && <Airbnb isOpen={airOpen} onClose={()=>{setAirOpen(false)}}/>}
         </div>
     );
 };
