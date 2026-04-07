@@ -1,0 +1,223 @@
+#airbnb{
+    position: fixed;
+    top: 0;
+    z-index: 111;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    @include flex-layout();
+    flex-direction: column;
+    overflow-y: auto;
+    padding-top: 10rem;
+    .air-wrap{
+        position: relative;
+        width: 55%;
+        max-width: 1000px;
+        min-width: 0;
+        overflow-y: auto;
+        background-color: var(--ab-bg);
+        padding-bottom: 5rem;
+        @include flex-layout($justify:flex-start);
+        flex-direction: column;
+        min-height: auto;
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        > *{
+            margin-bottom: 18rem;
+        }
+        .close-icon{
+            position: sticky;
+            top: 0;
+            float: right;
+            z-index: 112;
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: right;
+            cursor: pointer;
+            align-self: flex-end;
+            margin: 2rem;
+            color: var(--mm-title);
+        }
+        .title-wrap{
+            width: 100%;
+            @include flex-layout();
+            flex-direction: column;
+            gap: 8rem;
+            .top{
+                @include flex-layout();
+                flex-direction: column;
+                p{
+                    font-size: 1.3rem;
+                    font-weight: 300;
+                    color: var(--mm-title);
+                }
+                h1{
+                    font-size: 6.4rem;
+                    color: var(--ab-title);
+                }
+                .url{
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    color: var(--mm-title);
+                }
+            }
+            .title-img{
+                width: 80%;
+                height: 400px;
+                background-image: url(../../../public/images/airbnb/ab-bg.png);
+                flex-shrink: 0;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .title-desc{
+                color: var(--ab-title);
+                font-size: 1.4rem;
+                text-align: center;
+                line-height: 2.6rem;
+                font-weight: 400;
+            }
+        }
+        .res-design{
+            width: 100%;
+            @include flex-layout();
+            flex-direction: column;
+            gap: 12rem;
+            h2{
+                font-size: 3.4rem;
+                color: var(--ab-logo);
+            }
+            .res-desc{
+                width: 90%;
+                @include flex-layout();
+                flex-direction: column;
+                gap: 8rem;
+                h3{
+                    font-size: 2.5rem;
+                    color: var(--ab-title);
+                    text-align: center;
+                }
+                .pc-tablet{
+                    width: 100%;
+                    @include flex-layout();
+                    flex-direction: column;
+                    gap: 3rem;
+                    .pc-img{
+                        width: 80%;
+                        height: 300px;
+                        background-image: url(../../../public/images/airbnb/ab-pc.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .mobile{
+                    width: 100%;
+                    @include flex-layout();
+                    flex-direction: column;
+                    gap: 3rem;
+                    .mobile-img{
+                        width: 50%;
+                        height: 400px;
+                        background-image: url(../../../public/images/airbnb/ab-phone.png);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                    }
+                }
+            }
+        }
+        .info-wrap{
+            width: 80%;
+            @include flex-layout();
+            flex-direction: column;
+            gap: 5rem;
+            h2{
+                font-size: 3.4rem;
+                color: var(--ab-logo);
+            }
+            .info-desc{
+                @include flex-layout($align:flex-start);
+                gap: 7rem;
+                padding-left: 8rem;
+                .left{
+                    flex: 1;
+                    @include flex-layout($align:flex-start);
+                    flex-direction: column;
+                    gap: 1rem;
+                    ul{
+                        @include flex-layout($align:flex-start);
+                        flex-direction: column;
+                        gap: 0.3rem;
+                        h3{
+                            font-size: 1.7rem;
+                            color: var(--ab-point);
+                        }
+                        li{
+                            list-style: disc;
+                            margin-left: 1.5rem;
+                            font-size: 1.2rem;
+                            word-break: keep-all;
+                            font-weight: 400;
+                            line-height: 2rem;
+                            color: var(--ab-title);
+                        }
+                    }
+                }
+                .right{
+                    flex: 1;
+                    @include flex-layout($align:flex-start);
+                    flex-direction: column;
+                    gap: 1rem;
+                    ul{
+                        @include flex-layout($align:flex-start);
+                        flex-direction: column;
+                        gap: 0.3rem;
+                        h3{
+                            font-size: 1.7rem;
+                            color: var(--ab-point);
+                        }
+                        li{
+                            list-style: disc;
+                            margin-left: 1.5rem;
+                            font-size: 1.2rem;
+                            word-break: keep-all;
+                            font-weight: 400;
+                            color: var(--ab-title);
+                            line-height: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+        .learn{
+            @include flex-layout();
+            flex-direction: column;
+            gap: 8rem;
+            h2{
+                font-size: 3.3rem;
+                color: var(--ab-logo);
+            }
+            .learn-desc{
+                width: 80%;
+                @include flex-layout($align:flex-start);
+                gap: 4rem;
+                p{
+                    font-size: 1.6rem;
+                    text-align: center;
+                    word-break: keep-all;
+                    padding: 1.8rem 1rem;
+                    border: 1px solid var(--ab-title);
+                    color: var(--ab-title);
+                    font-weight: bold;
+                    span{
+                        color: var(--ab-point);
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
