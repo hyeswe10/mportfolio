@@ -63,7 +63,7 @@ const AboutMe = () => {
                 <div ref={sliderRef} className='container'>
                     {
                         icons.map((value,key)=>{
-                            return (<img key={key} src={`/images/skill-icons/${value}-icon.svg`}/>)
+                            return (<img key={key} src={`${process.env.PUBLIC_URL}/images/skill-icons/${value}-icon.svg`}/>)
                         })
                     }
                 </div>
