@@ -5,7 +5,7 @@
     flex-direction: column;
     gap: 15rem;
     h1{
-        @include font-54();
+        font-size: 6rem;
         text-align: center;
         color: var(--main-point);
     }
@@ -22,7 +22,7 @@
             padding: 5rem 0;
             &.netflix{
                 button{
-                    width: 30%;
+                    width: 25%;
                     color: var(--net-bg);
                     background-color: var(--net-title);
                     padding: 0.5rem 1rem;
@@ -39,7 +39,7 @@
                 border-top: 1px solid var(--main-txt);
                 border-bottom: 1px solid var(--main-txt);
                 button{
-                    width: 30%;
+                    width: 25%;
                     color: var(--mm-bg);
                     background-color: var(--mm-title);
                     padding: 0.5rem 1rem;
@@ -54,7 +54,7 @@
             }
             &.airbnb{
                 button{
-                    width: 30%;
+                    width: 25%;
                     color: var(--ab-bg);
                     background-color: var(--ab-logo);
                     padding: 0.5rem 1rem;
@@ -99,7 +99,7 @@
                 gap: 2.5rem;
                 flex: 1;
                 h3{
-                    font-size: 3.2rem;
+                    font-size: 3.7rem;
                 }
                 .tools{
                     @include flex-layout($justify:flex-start);
@@ -110,12 +110,12 @@
                         border-radius: 2rem;
                         font-weight: 300;
                         letter-spacing: 1.1;
-                        font-size: 1.1rem;
+                        font-size: 1.3rem;
                     }
                 }
                 .desc{
                     font-weight: 200;
-                    @include font-12();
+                    font-size: 1.3rem;
                 }
             }
         }

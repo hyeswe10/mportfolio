@@ -11,18 +11,18 @@
         flex-direction: column;
         gap: 4rem;
         h1{
-            @include font-54();
+            font-size: 6rem;
             color: var(--main-point);
         }
         .main-desc{
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             font-weight: 200;
             letter-spacing: 0.3px;
             line-height: 1.2;
         }
     }
     .timeline-container{
-        width: 80%;
+        width: 90%;
         position: relative;
         padding: 150px 0;
         .timeline-line{
@@ -59,13 +59,13 @@
                         color: var(--sm-btn);
                     }
                     h3{
-                        @include font-26();
+                        font-size: 3.2rem;
                         color: var(--sub-point);
                     }
                     .desc{
                         white-space: pre-line;
                         text-align: center;
-                        font-size: 1.1rem;
+                        font-size: 1.3rem;
                         font-weight: 200;
                     }
                     button{
@@ -113,13 +113,13 @@
                         color: var(--sm-btn);
                     }
                     h3{
-                        @include font-26();
+                        font-size: 3.2rem;
                         color: var(--sub-point);
                     }
                     .desc{
                         white-space: pre-line;
                         text-align: center;
-                        font-size: 1.1rem;
+                        font-size: 1.3rem;
                         font-weight: 200;
                     }
                     button{

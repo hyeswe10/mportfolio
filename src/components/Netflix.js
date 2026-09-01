@@ -17,7 +17,7 @@ const Netflix = ({isOpen,onClose}) => {
         <div id='netflix' onClick={()=>{onClose(false)}}>
             <div className='netflix-wrap' onClick={(e)=>{e.stopPropagation()}}>
                 <div className='close-icon' onClick={()=>{onClose(false)}}><IoCloseSharp/></div>
-                <img src='/images/netflix/net-bg.png' alt='넷플릭스 사진'/>
+                <img src='public/images/netflix/net-bg.png' alt='넷플릭스 사진'/>
                 <div className='title-wrap'>
                     <div className='top'>
                         <p>React / React Router / SCSS</p>
