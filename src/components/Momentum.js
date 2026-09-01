@@ -17,7 +17,7 @@ const Momentum = ({isOpen,onClose}) => {
         <div id='momentum' onClick={()=>{onClose(false)}}>
             <div className='mom-wrap' onClick={(e)=>{e.stopPropagation()}}>
                 <div className='close-icon' onClick={()=>{onClose(false)}}><IoCloseSharp/></div>
-                <img src='/images/momentum/mm-bg.png' alt='모멘텀 사진' className='back-ground'/>
+                <div className='img'></div>
                 <div className='title-wrap'>
                     <p>React / JavaScript / SCSS</p>
                     <h1>MOMENTUM</h1>

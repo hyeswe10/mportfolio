@@ -39,7 +39,10 @@
             align-self: flex-end;
             margin: 2rem;
         }
-        img{
+        .img{
+            background-image: url(../../../public/images/netflix/net-new-bg.png);
+            background-position: center;
+            background-size: contain;
             position: absolute;
             top: 0;
             left: 0;
